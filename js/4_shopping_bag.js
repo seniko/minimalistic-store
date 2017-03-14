@@ -17,6 +17,7 @@ function removeItems() {
 
         localStorage.removeItem("priceValue");
         localStorage.removeItem("amountValue");
+        window.scrollTo(0, 0);
         bagIndicate();
     }
 
@@ -34,6 +35,7 @@ function removeItems() {
 
         localStorage.removeItem("priceValue");
         localStorage.removeItem("amountValue");
+        window.scrollTo(0, 0);
         bagIndicate();
     }
 

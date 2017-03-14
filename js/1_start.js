@@ -1,5 +1,19 @@
 var slideCounter = 0;
-slideImg();
+
+var slInterval = setInterval(slideImg, 2000);
+
+var slContainer = document.getElementsByClassName("slider-container")[0];
+
+slContainer.addEventListener("mouseover", function () {
+    clearInterval(slInterval);
+    clearInterval(mouseOutInt);
+});
+
+var mouseOutInt;
+
+slContainer.addEventListener("mouseout", function () {
+    mouseOutInt = setInterval(slideImg, 2000);
+});
 
 function slideImg() {
     var slides = document.getElementsByClassName("slide");
@@ -21,7 +35,6 @@ function slideImg() {
     if (slideCounter == 3) {
         dots[2].style.backgroundColor = "#50c1e9";
     }
-    setTimeout(slideImg, 3500);
 }
 
 mainMenu();

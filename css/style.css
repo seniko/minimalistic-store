@@ -156,6 +156,11 @@ nav {
     width: 95%;
 }
 
+.search {
+    display: inline;
+    padding-left: 4%;
+}
+
 .search-input {
     padding-bottom: 8px;
     width: 118px;
@@ -513,6 +518,7 @@ main > h1 {
 
 .item img {
     width: 100%;
+    vertical-align: bottom;
 }
 
 .item:last-child {
@@ -526,7 +532,7 @@ main > h1 {
 }
 
 .item h1 {
-    margin-top: 36px;
+    margin-top: 44px;
     font-size: 15px;
     font-weight: bold;
 }
@@ -583,7 +589,7 @@ main > h1 {
 
 .btn-all-arrivals, .add-to-bag {
     display: block;
-    margin: 107px auto 78px auto;
+    margin: 98px auto 78px auto;
     padding: 20px 104px;
     background-color: #fff;
     border: 1px solid #e5e5e5;
@@ -769,6 +775,7 @@ main > h1 {
     margin-left: 13px;
     width: 46px;
     height: 21px;
+    text-align: center;
     font-family: 'robotoregular', sans-serif, Arial;
     font-size: 13px;
     background: url("../img/icons.png") no-repeat -61px 0;
@@ -1172,19 +1179,32 @@ a:hover~.bag-item-description h1{
         max-width: 690px;
     }
 
+    .big-pic {
+        width: 75%;
+        float: left;
+    }
+
+    .three-columns {
+        width: 25%;
+        float: right;
+    }
+
     .photo-switcher {
+        position: static;
         width: 100%;
     }
 
     .item-details {
-        top: 50%;
+        position: static;
+        top: 39%;
         left: 0;
         width: 100%;
         padding-top: 0;
     }
 
     .main-container {
-        min-height: 1350px;
+        margin: 0 auto 0 auto;
+        min-height: 994px;
     }
 
     .description > h1 {
@@ -1195,10 +1215,10 @@ a:hover~.bag-item-description h1{
         font-family: 'open_sansbold', sans-serif, Arial;
     }
 
-    .description > p {
+    .description p {
         text-align: center;
         margin: 0 auto -110px auto;
-        max-width: 787px;
+        max-width: 537px;
     }
 
     .price {
@@ -1228,12 +1248,25 @@ a:hover~.bag-item-description h1{
         min-height: 80px;
     }
 
+    .container {
+        position: absolute;
+        z-index: 2000;
+        margin: 0;
+        width: 100%;
+        background-color: white;
+        border-bottom: 1px solid #e5e5e5;
+    }
+
     .sign-up {
         display: none;
     }
 
     .bag a img {
         display: none;
+    }
+
+    .logo {
+        padding: 20px 5% 16px;
     }
 
     .logo a:first-child {
@@ -1257,7 +1290,7 @@ a:hover~.bag-item-description h1{
 
     .open {
         display: block;
-        padding-top: 32px;
+        padding: 32px 5% 0;
         height: 600px;
         border-top: 1px solid #e5e5e5;
     }
@@ -1275,7 +1308,8 @@ a:hover~.bag-item-description h1{
     .menu-button {
         float: right;
         height: 79px;
-        padding-left: 27px;
+        padding-left: 20px;
+        padding-right: 20px;
         cursor: pointer;
         border-left: 1px solid #e5e5e5;
     }
@@ -1292,9 +1326,12 @@ a:hover~.bag-item-description h1{
         transition: 0.1s;
     }
 
+    .close {
+        border: none;
+    }
+
     .close div:first-child {
-        -webkit-transform: rotate(45deg) translate(0px, 11.6px);
-        transform: rotate(45deg) translate(0px, 11.6px);
+        transform: rotate(45deg) translate(5.5px, 5.5px);
         background-color: #f14a58;
     }
 
@@ -1304,8 +1341,7 @@ a:hover~.bag-item-description h1{
     }
 
     .close div:last-child {
-        -webkit-transform: rotate(-45deg) translate(0px, -11.6px);
-        transform: rotate(-45deg) translate(0px, -11.6px);
+        transform: rotate(-45deg) translate(5.5px, -5.5px);
         background-color: #f14a58;
     }
 
